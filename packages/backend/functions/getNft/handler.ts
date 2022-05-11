@@ -9,7 +9,7 @@ export const main = async (): Promise<any> => {
     ExpressionAttributeValues: {
       ':pk': { S: 'Nft' },
     },
-    KeyConditionExpression: 'PK = :pk ',
+    KeyConditionExpression: 'PK = :pk',
   };
 
   const { Items = [] as any } = await client.send(new QueryCommand(params));
